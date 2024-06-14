@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form action="/" method="post">
+      {% if names %}
+          <select name="st">
+            {% for n in names %}
+                <option value={{ n }}>{{ n }}</option>
+            {% endfor %}
+          </select>
+      {% endif %}
+      <input type="submit" value="ok">
+      {% if avscore %}
+           <table border="1">
+             <tr>
+                 <td>{{ name }}</td>
+                 <td>{{ avscore }}</td>
+             </tr>
+           </table>
+      {% endif %}
+  </form>
+</body>
+</html>
